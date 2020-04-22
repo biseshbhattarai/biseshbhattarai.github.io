@@ -5,6 +5,9 @@
         
     </head>
     <body style="background-image:url(astronomy-constellation-dark-998641.jpg);background-size:100% 100%;height: 669px;">
+    <div id="loading">
+  <img id="loading-image" src="ajax-loader.gif" alt="Loading..." />
+</div>
     <div style="text-align: center">
         <h2 style="color:white;">Research & blogs</h2>
         <br/>
@@ -27,6 +30,17 @@
 	<a target="_blank" style="color: white" href="https://www.linkedin.com/in/bishesh-bhattarai-541513164/">Linkedin</a>
 	<a target="_blank" style="color: white"  href="https://medium.com/@biseshbhattaraiii">Medium</a>
 
-</li> 
+</li>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+     $(window).load(function() {
+     $('#loading').hide();
+  });
+</script>
     </body>
 </html>
