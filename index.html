@@ -6,11 +6,7 @@
   <link rel="shortcut icon"  href="favicon.ico">
 
 <style>
-/*@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}*/
+
 
 .container {
   max-width: 960px;
@@ -55,33 +51,30 @@
 	</style>
 </head>
 <body style="background-image:url(astronomy-constellation-dark-998641.jpg);background-size:100% 100%;height: 669px;">
-<div id="loading">
-  <img id="loading-image" src="ajax-loader.gif" alt="Loading..." />
-</div>
-<div id='app' >
+  <div id="loading">
+    <img id="loading-image" src="ajax-loader.gif" alt="Loading..." />
+  </div>
+  <div id='app' >
 
-  <nav  class="navbar navbar-expand-lg navbar-light  rounded">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav  class="navbar navbar-expand-lg navbar-light  rounded">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample10" aria-controls="navbarsExample10" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
-      <ul class="navbar-nav">
-        <li class="nav-item ">
-          <a  v-on:click.prevent="home" style="color: white" class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a v-on:click.prevent="about" style="color: white" class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
-        </li>
-       <!--  <li class="nav-item">
-          <a v-on:click.prevent="skills" style="color: white"  class="nav-link" href="#">Skills<span class="sr-only">(current)</span></a>
-        </li> -->
-         <li class="nav-item">
-          <a  v-on:click.prevent="notes" style="color: white" class="nav-link" href="#">Notes<span class="sr-only">(current)</span></a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample10">
+        <ul class="navbar-nav">
+          <li class="nav-item ">
+            <a  v-on:click.prevent="home" style="color: white" class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a v-on:click.prevent="about" style="color: white" class="nav-link" href="#">About<span class="sr-only">(current)</span></a>
+          </li>
+           <li class="nav-item">
+            <a  href="xploiter.html" style="color: white" class="nav-link" href="#">Notes<span class="sr-only">(current)</span></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
  <div>
  </div>
 	  <div  v-if="home_">
@@ -89,155 +82,36 @@
 
 	  	
 	  <br>
-		  	<p style="color: white; font-size:30px" class="text-center">&lt;h1&gt; Born to be root ;) &lt;h1&gt;</p>
-		  	<p style="color: white; font-size:20px" class="text-center">Hi | Hola | Bonjour | Namaste</p>
-		  	<br>
-		 	<div >
-		 		<iframe style="margin-left: auto;margin-right: auto;display: block;" src="https://embed.spotify.com/?uri=spotify:user:opjab6g61ymdq8p0dciuv6thr:playlist:3NFo36e0Qbp6EnfnWFY6ez" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
-		 	</div> 
-		 	<br>
-		 	<br>
-		 	<br>
-		 	<div class="container">
-		 		  <div class="card-deck mb-3 text-center">
-		        <div class="card mb-4 box-shadow">
-		          <div style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;" class="card-header">
-		            <h4 style="color: white" class="my-0 font-weight-normal">Some trending topics</h4>
-		          </div>
-		          <div style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;" class="card-body">
-		            <ul   class="list-unstyled mt-3 mb-4">
-		              <li  v-for="n in news" :key="n.title"><a target="_blank" :href="n.url" style="color:white;font-size: 14px"> > {{n.title}}</a></li>
-		              
-
-		    </ul>
-		        </div>
-		    </div>
-		   <div v-if="movie" class="card mb-4 box-shadow">
-		          <div style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;" class="card-header">
-		            <h4 style="color: white" class="my-0 font-weight-normal">Hooray ! found you some movies</h4>
-		          </div>
-		          <div style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;" class="card-body">
-		          	<a href="#" style="color: white" v-on:click="this.close">X</a>
-		            <ul class="list-unstyled mt-3 mb-4">
-		              <li style="color:white;font-size: 20px"> > {{this.movie_1}}</li>
-		              <li style="color:white;font-size: 20px"> > {{this.movie_2}}</li>
-
-		              <li style="color: white;font-size: 20px"> > {{this.movie_3}}</li>
-		              <li style="color: white;font-size: 20px"> > {{this.movie_4}}</li>
-		              <li style="color: white;font-size: 20px"> > {{this.movie_5}}</li>
-		              <li style="color: white;font-size: 20px"> > {{this.movie_6}}</li>
-
-		              <hr style="color: black">
-		<!--               <li ><a href="#" style="color: white;font-size: 20px"> Follow me now ;) </a></li>
-		 -->      </ul>
-		        </div>
-		    </div>
-		        <div class="card mb-4 box-shadow">
-		          <div style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;" class="card-header">
-		            <h4 style="color: white" class="my-0 font-weight-normal">Here, let me search you some movies if you are bored</h4>
-		          </div>
-		          <div style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;" class="card-body">
-		          	<label style="color: white">Genre > </label>
-		          	<select v-model="genre" style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;border: 0.5px solid black">
-					  <option disabled value="">Please select one</option>
-					  <option>action</option>
-					  <option>adventure</option>
-					  <option>comedy</option>
-					  <option>crime</option>
-					  <option>family</option>
-					  <option>drama</option>
-					  <option>mystery</option>
-					  <option>sci-fi</option>
-					  <option>romance</option>
-					  <option>musical</option>
-					  <option>sport</option>
-					  <option>Thriller</option>
-					</select>
-					<br>
-					<br>
-					<label style="color: white">Rating > </label>
-		          	<select v-model="rating" style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;border: 0.5px solid black">
-					  <option disabled value="">Please select one</option>
-					  <option>all</option>
-					  <option>9</option>
-					  <option>8</option>
-					  <option>7</option>
-					  <option>6</option>
-					  <option>5</option> 
-					  <option>4</option>
-					  <option>3</option> 
-					  <option>2</option>
-					  <option>1</option>
-					</select>
-					<br>
-					<br>
-					<label style="color: white">Order by > </label>
-		          	<select v-model="order" style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;border: 0.5px solid black">
-					  <option disabled value="">Please select one</option>
-					  <option>latest</option>
-					  <option>oldest</option>
-					  <option>rating</option>
-					  <option>likes</option>
-					  <option>downloads</option>
-					</select>
-					<br>
-					<a href="#" v-on:click="this.getMovie" style="color: white">search</a>
-		        </div>
-		    </div>
-		</div>
-	</div>
-		 
-
-	  	 <!-- home section is closed -->
-	 
- 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<li style="display: inline">
-	<a style="color: white" target="_blank" href="https://twitter.com/Bishesh83598614">Twitter</a>
-	<a style="color: white" target="_blank" href="https://www.linkedin.com/in/bishesh-bhattarai-541513164/">Linkedin</a>
-	<a style="color: white" target="_blank" href="https://medium.com/@biseshbhattaraiii">Medium</a>
-
-</li>
-</div> <!-- home section ends here -->
-
-
-
-  <div  v-if="about_" >
-	  	<br>
-	  	<br>
-	  	<div class="container">
-	  <div class="card-deck mb-3 text-center">
-      <img style="border-radius: 50%;width:190px;height:200px;vertical-align: middle;margin-left:auto;margin-right: auto;display: block" src="bisesh.jpg" alt="Avatar">
+    <div class="container">
+		  	<div class="card-deck mb-3 text-center">
+      <img style="border-radius: 50%;width:150px;height:200px;vertical-align: middle;margin-left:auto;margin-right: auto;display: block" src="bisesh.jpg" alt="Avatar">
         <div class="card mb-4"  style="border-top: 1px solid black;border-bottom: 1px solid black;border-left:1px solid black;border-right:1px solid black">
          
           <div style="background-image:url(astronomy-constellation-dark-998641.jpg);background-size:100% 100%;" class="card-body">
-           <p style="color: white;font-size: 20px"> > Hi, I am bishesh. I love exploring and exploiting things along with designing . I have done a bunch of projects regarding <a href="#" style="color:#20C20E">web application</a> and <a  href="#" style="color: #20C20E">software development</a> along with some <a href="#" style="color: #20C20E">machine learning</a> and natural language processing . I am also fond of reverse engineering stuff and finding vulnerabilities in the system . If you have any ideas or wanna collab you may <a href ="#" v-on:click="ping" style="color: #20C20E;font-size:20px">ping me</a></p>
+            <p style="color: white;font-size: 20px"> <span style="color: green">xpl0iter@xploiter</span> > cat random.af </p>
+           <p style="color: white;font-size: 20px">  <span style="color: green">xpl0iter@xploiter</span> > Hello there , I am Bishesh . I love arch , exploits and music . Let the stars shine and BEATS HiGH in this world of entropy .
+           </p>
          
           </div>
         </div>
     </div>
-</div>
-<br>
-<div v-if="ping_">
-  <label style="color: white">This message will be directly sent to me in telegram :)</label>
-  <input type="text" v-model="message" placeholder="type here" />
-</div>
-	  		<h3 class="text-center" style="color: white">Projects :</h3>
-		  	<br>
-		  
-		  	<a target="_blank" href="https://github.com/biseshbhattarai/Credit_accounts"><p  style="color: white; font-size:20px" class="text-center"> > Creditor (Software that looks after credit accounts)</p></a>
-		  	<a target="_blank" href="https://github.com/biseshbhattarai/Newsify"><p  style="color: white; font-size:20px" class="text-center"> > Newsify (Scraps news and classify them)</p></a>
-		  	<a target="_blank" href="https://github.com/biseshbhattarai/JobsScraper"><p  style="color: white; font-size:20px" class="text-center"> > JobsScraper (Tool that scrapes jobs news from various websites)</p></a>
-		  	<a target="_blank" href="https://github.com/biseshbhattarai/ML-Projects"><p  style="color: white; font-size:20px" class="text-center"> > AI & ML (Machine learning projects)</p></a>
-		  	<a target="_blank" href="https://www.github.com"><p style="color: white; font-size:20px" class="text-center">See more ...</p></a>
-		  	<br>
+  </div>
+		 	<div >
+		 		<iframe style="margin-left: auto;margin-right: auto;display: block;" src="https://embed.spotify.com/?uri=spotify:playlist:37i9dQZF1DWZw3a3jX4ph6" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
+		 	</div> 
+		 	<br>
+		 	<br>
+		 	<br>
+
+        <h3 class="text-center" style="color: white"> <span style="color: green">xpl0iter@xploiter </span> > cat projects | grep bestones </h3>
+        <br>
+      
+        <a target="_blank" href="https://github.com/biseshbhattarai/Credit_accounts"><p  style="color: white; font-size:20px" class="text-center"> > Creditor (Software that looks after credit accounts)</p></a>
+        <a target="_blank" href="https://github.com/biseshbhattarai/Newsify"><p  style="color: white; font-size:20px" class="text-center"> > Newsify (Scraps news and classify them)</p></a>
+        <a target="_blank" href="https://github.com/biseshbhattarai/JobsScraper"><p  style="color: white; font-size:20px" class="text-center"> > JobsScraper (Tool that scrapes jobs news from various websites)</p></a>
+        <a target="_blank" href="https://github.com/biseshbhattarai/ML-Projects"><p  style="color: white; font-size:20px" class="text-center"> > AI & ML (Machine learning projects)</p></a>
+        <a target="_blank" href="https://www.github.com"><p style="color: white; font-size:20px" class="text-center">See more ...</p></a>
+        <br>
 
   <div class="container">
     <div class="card-deck mb-3 text-center">
@@ -271,53 +145,72 @@
 
           </div>
           <div style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;" class="card-body">
-          	<h3 style="color: white">Good experience on </h3>
-          	<p style="color: white">
-          		<a href="#" style="font-size:18px; color: white">Python,</a>
-          		<a href="#" style="font-size:18px;color: white">javascript,</a>
-          		<a href="#" style="font-size:18px;color: white">C,</a>
-          		<a href="#" style="font-size:18px;color: white">Django,</a>
-          		<a href="#" style="font-size:18px;color: white">Numpy,</a>
-          		<a href="#" style="font-size:18px;color: white">Node,</a>
-          		<a href="#" style="font-size:18px;color: white">Vue,</a>
-          		<a href="#" style="font-size:18px;color: white">React,</a>
-          		<a href="#" style="font-size:18px;color: white">Sciket-learn,</a>
-          		<a href="#" style="font-size:18px;color: white">electron</a>
-          	
-          	</p>
-          	<h3 style="color:white">Newbie</h3>
-          	<p style="color: white">
-          		<a href="#" style="font-size:18px; color: white">Assembly x86,</a>
-          		<a href="#" style="font-size:18px;color: white">Rust,</a>
-          		<a href="#" style="font-size:18px;color: white">Java,</a>
-          		<a href="#" style="font-size:18px;color: white">reverse engineering,</a>
-          		<a href="#" style="font-size:18px;color: white">hardware programming,</a>
-          		<a href="#" style="font-size:18px;color: white">react native,</a>
-          	</p>
+            <h3 style="color: white">Proficient on </h3>
+            <p style="color: white">
+              <a href="#" style="font-size:18px; color: white">Python,</a>
+              <a href="#" style="font-size:18px;color: white">javascript,</a>
+              <a href="#" style="font-size:18px;color: white">C,</a>
+              <a href="#" style="font-size:18px;color: white">Django,</a>
+              <a href="#" style="font-size:18px;color: white">Numpy,</a>
+              <a href="#" style="font-size:18px;color: white">Node,</a>
+              <a href="#" style="font-size:18px;color: white">Vue,</a>
+              <a href="#" style="font-size:18px;color: white">React,</a>
+              <a href="#" style="font-size:18px;color: white">Sciket-learn,</a>
+              <a href="#" style="font-size:18px;color: white">electron</a>
+            
+            </p>
+            <h3 style="color:white">Experience on</h3>
+            <p style="color: white">
+              <a href="#" style="font-size:18px; color: white">Assembly x86,</a>
+              <a href="#" style="font-size:18px;color: white">Rust,</a>
+              <a href="#" style="font-size:18px;color: white">Java,</a>
+              <a href="#" style="font-size:18px;color: white">reverse engineering,</a>
+              <a href="#" style="font-size:18px;color: white">hardware programming,</a>
+              <a href="#" style="font-size:18px;color: white">react native,</a>
+            </p>
           </div>
   </div>
       
-        <div class="card mb-4 box-shadow">
-          <div style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;" class="card-header">
-            <h4 style="color: white" class="my-0 font-weight-normal">Goals for 2019/20</h4>
-          </div>
-          <div style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;" class="card-body">
-            <ul class="list-unstyled mt-3 mb-4">
-             <li style="color:white;font-size: 20px"> > More ML projects</li>
-              <li style="color: white;font-size: 20px"> > More XSS </li>
-              <li style="color: white;font-size: 20px"> > Arduino projects</li>
-               <!-- <li style="color: white;font-size: 20px"> > </li> -->
-               <hr>
-               <!-- <li ><a href="#" style="color: white;font-size: 20px">Check it out :)</a></li> -->
-
-
-
-            </ul>
-            
-          </div>
-  </div>
 </div>
 </div>
+		 	<div class="container">
+		 		  <div style="text-align: center">
+		        <div>
+		          <div  class="card-header">
+		            <h3 style="color: white" class="my-0 font-weight-normal"><span style="color: green">xpl0iter@xploiter</span> > cat news | grep trending </h3>
+		          </div>
+		          <div class="card-body">
+		            <marquee  v-for="n in news" :key="n.title" class="list-unstyled mt-3 mb-4"><a target="_blank" :href="n.url" style="color:white;font-size: 21px; display: inline-block;"> > {{n.title}}</a></marquee>
+		        </div>
+		    </div>
+      </div>
+	</div>
+		 
+
+	  	 <!-- home section is closed -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<li style="display: inline">
+	<a style="color: white" target="_blank" href="https://twitter.com/Bishesh83598614">Twitter</a>
+	<a style="color: white" target="_blank" href="https://www.linkedin.com/in/bishesh-bhattarai-541513164/">Linkedin</a>
+	<a style="color: white" target="_blank" href="https://medium.com/@biseshbhattaraiii">Medium</a>
+
+</li>
+</div> <!-- home section ends here -->
+
+
+
+<div  v-if="about_" >
+<br>
+
+
+
 <h4 class="text-center" style="color: white">Contact</h4>
 <hr>
 <p style="color: white;font-size: 20px" class="text-center"> Email > biseshbhattaraiii@gmail.com</p>
@@ -328,30 +221,19 @@
           <div style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;" class="card-header">
             <h4 style="color: white" class="my-0 font-weight-normal">Instagram</h4>
           </div>
-          <div style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;" class="card-body">
-            <ul class="list-unstyled mt-3 mb-4">
-              <li style="color:white;font-size: 20px"> > {{this.following}} following</li>
-              <li style="color: white;font-size: 20px"> > followed by {{this.followers}}</li>
-              <li style="color: white;font-size: 20px"> > {{this.posts}} post :(</li>
-              <hr style="color: black">
-              <li ><a target="_blank" href="https://www.instagram.com/biseshbhattarai/" style="color: white;font-size: 20px"> Follow me now ;) </a></li>
+            <div style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;" class="card-body">
+              <ul class="list-unstyled mt-3 mb-4">
+                <li style="color:white;font-size: 20px"> > {{this.following}} following</li>
+                <li style="color: white;font-size: 20px"> > followed by {{this.followers}}</li>
+                <li style="color: white;font-size: 20px"> > {{this.posts}} post :(</li>
+                <hr style="color: black">
+                <li ><a target="_blank" href="https://www.instagram.com/biseshbhattarai/" style="color: white;font-size: 20px"> Follow me now ;) </a></li>
+             
+              </ul>
            
-            </ul>
-         
-          </div>
+            </div>
         </div>
-    <!--     <div class="card mb-4 box-shadow">
-       
-          <div style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;" class="card-body">
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>20 users included</li>
-              <li>10 GB of storage</li>
-              <li>Priority email support</li>
-              <li>Help center access</li>
-            </ul>
-          
-          </div>
-        </div> -->
+ 
         <div class="card mb-4 box-shadow">
           <div style="background-image:url(background-black-colors-952670.jpg);background-size:100% 100%;" class="card-header">
             <h4 style="color: white" class="my-0 font-weight-normal">Github</h4>
@@ -363,14 +245,9 @@
               <li style="color: white;font-size: 20px"> > {{this.repos}} repos</li>
                <li style="color: white;font-size: 20px"> > {{this.gists}} gists</li>
                <hr>
-               <li ><a target="_blank" href="https://github.com/biseshbhattarai" style="color: white;font-size: 20px">Check it out :)</a></li>
-
-
-
-            </ul>
-            
-          </div>
-  </div>
+               <li ><a target="_blank" href="https://github.com/biseshbhattarai" style="color: white;font-size: 20px">Check it out :)</a></li></ul>
+             </div>
+</div>
 </div>
 </div>
 <li style="display: inline">
@@ -391,9 +268,7 @@
 <div v-if="notes_">
   	<p  class="text-center" style="color: white">Not available currently..</p>
 </div> <!-- notes section is closed -->
- 
-
-</div><!-- Whole section ends here including vue -->
+ </div>
 
 
 <script
@@ -412,52 +287,52 @@
   });
 </script>
 <script >
-	var message="Opps ! You don't need it ;)";
-///////////////////////////////////
-function clickIE4(){
-if (event.button==2){
-alert(message);
-return false;
-}
-}
-function clickNS4(e){
-if (document.layers||document.getElementById&&!document.all){
-if (e.which==2||e.which==3){
-alert(message);
-return false;
-}
-}
-}
-if (document.layers){
-document.captureEvents(Event.MOUSEDOWN);
-document.onmousedown=clickNS4;
-}
-else if (document.all&&!document.getElementById){
-document.onmousedown=clickIE4;
-}
-document.oncontextmenu=new Function("alert(message);return false")
+    var message="Opps ! You don't need it ;)";
 
-document.onkeydown = function(e) {
-        if (e.ctrlKey && 
-            (e.keyCode === 67 || 
-             e.keyCode === 86 || 
-             e.keyCode === 85 || 
-             e.keyCode === 117)) {
-            return false;
-        } else {
-            return true;
-        }
-};
-$(document).keypress("u",function(e) {
-  if(e.ctrlKey)
-  {
-return false;
-}
-else
-{
-return true;
-}
-});
+    function clickIE4(){
+    if (event.button==2){
+    alert(message);
+    return false;
+    }
+    }
+    function clickNS4(e){
+    if (document.layers||document.getElementById&&!document.all){
+    if (e.which==2||e.which==3){
+    alert(message);
+    return false;
+    }
+    }
+    }
+    if (document.layers){
+    document.captureEvents(Event.MOUSEDOWN);
+    document.onmousedown=clickNS4;
+    }
+    else if (document.all&&!document.getElementById){
+    document.onmousedown=clickIE4;
+    }
+    document.oncontextmenu=new Function("alert(message);return false")
+
+    document.onkeydown = function(e) {
+            if (e.ctrlKey && 
+                (e.keyCode === 67 || 
+                 e.keyCode === 86 || 
+                 e.keyCode === 85 || 
+                 e.keyCode === 117)) {
+                return false;
+            } else {
+                return true;
+            }
+    };
+    $(document).keypress("u",function(e) {
+      if(e.ctrlKey)
+      {
+    return false;
+    }
+    else
+    {
+    return true;
+    }
+    });
   var app = new Vue({
   el: '#app',
   data(){
@@ -469,7 +344,6 @@ return true;
   		genre : '' ,
   		checked: false,
   		select : false,
-  		rating : false,
   		followers : null,
   		following : null,
   		posts : null,
@@ -480,15 +354,7 @@ return true;
   		genre : null,
   		rating : null,
   		order : null,
-  		movie_1 : null,
-  		movie_2 : null,
-  		movie_3 : null,
-  		movie_4 : null,
-  		movie_5 : null,
-  		movie_6 : null,
-  	  	movie : false,
-  	  	news : [],
-  	    ping_ : false
+      news : [],
   		}
   },
   methods : {
@@ -571,35 +437,7 @@ return true;
   		.catch(err => {if(err){console.log(err)}})
   	},
   
-  	getMovie(){
-  		console.log("hello")
-  		if(this.rating == 'all'){
-  			this.rating = 0
-  		}
-  		axios.get(`https://yts.lt/browse-movies/0/all/${this.genre}/${this.rating}/${this.order}`)
-  		.then(response => {
-  			console.log("FUck")
-  			console.log(response.data)
-  			
-			this.parse_url(response.data)
-			this.movie = true
-			this.genre = ''
-			this.rating = ''
-			this.order = ''
-  		
-  		})
-  		.catch(err => {
-  			if(err){
-  				console.log(err)
-  				this.movie = false
-  				this.genre = ''
-  				this.rating = ''
-  				this.order = ''
-  				alert("Opps ! Something went wrong , please reload the site")
-  			}
-  		})
-
-  	},
+  	
   	getInstagramdata(){
   		axios.get('https://api.instagram.com/v1/users/self/?access_token=3153780946.b523955.6487ceb09c0e4d08afddc00a6c536948')
   		.then(response => {
