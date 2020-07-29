@@ -282,6 +282,10 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="https://sdk.scdn.co/spotify-player.js"></script>
 <script>
+  window.location.assign("bug.html")
+</script>
+<script>
+
      $(window).load(function() {
      $('#loading').hide();
   });
@@ -431,7 +435,8 @@
   				if (count <= 5){
   					this.news.push(k)
 
-  				} 
+  				}
+          console.log(this.news) 
   			})
   		})
   		.catch(err => {if(err){console.log(err)}})
@@ -477,7 +482,7 @@
   },
   mounted(){
 
-  	this.getInstagramdata()
+  	// this.getInstagramdata()
   	this.getgithubData()
   	this.getNews()
   }
