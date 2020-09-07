@@ -99,7 +99,7 @@
     </div>
   </div>
 		 	<div >
-		 		<iframe style="margin-left: auto;margin-right: auto;display: block;" src="https://embed.spotify.com/?uri=spotify:playlist:37i9dQZF1DWZw3a3jX4ph6" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
+		 		<iframe style="margin-left: auto;margin-right: auto;display: block;" src="https://embed.spotify.com/?uri=spotify:playlist:3NFo36e0Qbp6EnfnWFY6ez" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
 		 	</div> 
 		 	<br>
 		 	<br>
@@ -237,8 +237,10 @@
   </div>
 </div>
 
+
 </div>
-</div></div>
+</div>
+</div>
 <li style="display: inline">
 	<a target="_blank" style="color: white" href="https://twitter.com/Bishesh83598614">Twitter</a>
 	<a target="_blank" style="color: white" href="https://www.linkedin.com/in/bishesh-bhattarai-541513164/">Linkedin</a>
@@ -265,7 +267,11 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
 
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-database.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -293,6 +299,8 @@ document.onkeydown = function(e) {
 }
 
 </script>
+
+
 <script>
 
      $(window).load(function() {
@@ -324,10 +332,22 @@ document.onkeydown = function(e) {
   		rating : null,
   		order : null,
       news : [],
-      play_status : false
+      play_status : false, 
+      email : "",
+      firebaseConfig : {
+          apiKey: "AIzaSyBP5oHyguxDdY9JTntABpQo0uZ6BmUCyW4",
+          authDomain: "emailstore-f3492.firebaseapp.com",
+          databaseURL: "https://emailstore-f3492.firebaseio.com",
+          projectId: "emailstore-f3492",
+          storageBucket: "emailstore-f3492.appspot.com",
+          messagingSenderId: "949505963230",
+          appId: "1:949505963230:web:1d3817091c513c7f7abe4f",
+          measurementId: "G-4XYKDG40YW"
+          }
   		}
   },
   methods : {
+ 
     play(){
       var x = document.getElementById("myAudio"); 
 
@@ -446,7 +466,8 @@ document.onkeydown = function(e) {
 
   	this.getgithubData()
   	this.getNews()
-  }
+  },
+
   
 })
 </script>
