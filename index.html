@@ -1,3 +1,5 @@
+<!-- Don't look the code below . If you wanna redesign/redevelop this ping me biseshbhattaraiii@gmail.com :) -->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -79,19 +81,23 @@
  </div>
 	  <div  v-if="home_">
 	  	<p class="text-center" style="color: #20C20E;font-size: 20px">#!/bin/bash</p>
+      <p class="text-center" style="color: #fafcfa;font-size: 20px">"No one cares but you do , don't you ?"</p>
 
 	  	
 	  <br>
     <div class="container">
 		  	<div class="card-deck mb-3 text-center">
-      <!-- <img style="border-radius: 50%;width:150px;height:20 0px;vertical-align: middle;margin-left:auto;margin-right: auto;display: block" src="bisesh.jpg" alt="Avatar"> -->
+
         <div class="card mb-4"  style="border-top: 1px solid black;border-bottom: 1px solid black;border-left:1px solid black;border-right:1px solid black">
           <audio id="myAudio">
             <source src="lofi.ogg" type="audio/ogg">
           </audio>
           <div style="background-image:url(astronomy-constellation-dark-998641.jpg);background-size:100% 100%;" class="card-body">
-            <p style="color: white;font-size: 20px"> <span style="color: green">xpl0iter@xploiter</span> > cat random.af </p>
-           <p style="color: white;font-size: 20px">  <span style="color: green">xpl0iter@xploiter</span> > Hello there , I am Bishesh . I love arch , exploits and music . Let the stars shine and <a href="#" style="color:green" v-on:click="play">BEATS</a> HiGH in this world of entropy . Here is my <a href="resume_2020.pdf"><span style="color: green">Curriculum Vitae</span></a>
+            <p style="color: white;font-size: 20px"> <span style="color: green">reverser@bishesh</span> > cat random.af </p>
+           <p style="color: white;font-size: 20px">  <span style="color: green">reverser@bishesh</span> > Hello there , I am Bishesh . Building and breaking, living and surviving, exploring the entropy . Sometime just  <a href="#" style="color:green" v-on:click="play">BEATS UP</a>
+            <br> 
+            <br>
+            Professional me <a href="resume_2021.pdf"><span style="color: green">Curriculum Vitae (CV)</span></a>
            </p>
          
           </div>
@@ -99,7 +105,7 @@
     </div>
   </div>
 		 	<div >
-		 		<iframe style="margin-left: auto;margin-right: auto;display: block;" src="https://embed.spotify.com/?uri=spotify:playlist:3NFo36e0Qbp6EnfnWFY6ez" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
+		 		<iframe style="margin-left: auto;margin-right: auto;display: block;" src="https://open.spotify.com/embed/playlist/4PpG7tfXKmf6WwdhH61TkE?utm_source=generator" width="300" height="300" frameborder="0" allowtransparency="true"></iframe>
 		 	</div> 
 		 	<br>
 		 	<br>
@@ -107,29 +113,34 @@
 
    
 		 	<div class="container">
-        <h3 class="text-center" style="color: white"> <span style="color: green">xpl0iter@xploiter </span> > cat projects | grep bestones </h3>
+        <h3 class="text-center" style="color: white"> <span style="color: green">reverser@bishesh </span> > cat projects | grep bestones </h3>
         <br>
         
         <a target="_blank" href="https://github.com/biseshbhattarai/Credit_accounts"><p  style="color: white; font-size:20px" class="text-center"> > Creditor (Software that looks after credit accounts)</p></a>
         <a target="_blank" href="https://github.com/biseshbhattarai/Newsify"><p  style="color: white; font-size:20px" class="text-center"> > Newsify (Scraps news and classify them)</p></a>
         <a target="_blank" href="https://github.com/biseshbhattarai/JobsScraper"><p  style="color: white; font-size:20px" class="text-center"> > JobsScraper (Tool that scrapes jobs news from various websites)</p></a>
         <a target="_blank" href="https://github.com/biseshbhattarai/ML-Projects"><p  style="color: white; font-size:20px" class="text-center"> > AI & ML (Machine learning projects)</p></a>
-        <a target="_blank" href="https://www.github.com"><p style="color: white; font-size:20px" class="text-center">See more ...</p></a>
+        <a target="_blank" href="https://www.github.com/biseshbhattarai"><p style="color: white; font-size:20px" class="text-center">See more ...</p></a>
+        <p style="color: white; font-size:20px" class="text-center">OR</p>
+        <div>
+          <h3 class="text-center" style="color: white"> <span style="color: green">reverser@bishesh </span> > cat projects | grep bestones -exec genPortfolio {} \;</h3>
+          <br>
+          <a href="portfolio.html"><p style="color: green; font-size:20px" class="text-center"> > Pretty little portfolio</p></a>
+        </div>
+
         <br>
 		 		  <div style="text-align: center">
 		        <div>
 		          <div  class="card-header">
-		            <h3 style="color: white" class="my-0 font-weight-normal"><span style="color: green">xpl0iter@xploiter</span> > cat news | grep trending </h3>
+		            <h3 style="color: white" class="my-0 font-weight-normal"><span style="color: green">reverser@bishesh</span> > cat news | grep trending </h3>
 		          </div>
 		          <div class="card-body">
 		            <marquee  v-for="n in news" :key="n.title" class="list-unstyled mt-3 mb-4"><a target="_blank" :href="n.url" style="color:white;font-size: 21px; display: inline-block;"> > {{n.title}}</a></marquee>
 		        </div>
 		    </div>
       </div>
-	</div>
-		 
+    </div>
 
-	  	 <!-- home section is closed -->
 <br>
 <br>
 <br>
@@ -144,9 +155,7 @@
 	<a style="color: white" target="_blank" href="https://medium.com/@biseshbhattaraiii">Medium</a>
 
 </li>
-</div> <!-- home section ends here -->
-
-
+</div>
 
 <div  v-if="about_" >
 <br>
